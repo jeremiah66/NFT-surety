@@ -32,7 +32,7 @@ This contract implements simple counter backed by storage on blockchain. Contrac
 Plus and minus buttons increase and decrease value correspondingly. When button L is toggled, a little light turns on, just for fun. RS button is for reset. LE and RE buttons to let the robot wink at you.
 
 # To run
-Open in the Gitpod link above or clone the repository.
+clone the repository.
 
 git clone https://github.com/near-examples/rust-counter
 
