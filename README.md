@@ -2,28 +2,28 @@
 ## Counter example in Rust
 near keys contract.spread.testnet   - если удалить тут ключ то контракт будет залоченным и уже не изменяемым
 
- export CONTRACT_NAME=contract.spread.testnet```
- echo $CONTRACT_NAME```
+ export CONTRACT_NAME=contract.spread.testnet
+ echo $CONTRACT_NAME
 
-* near view contract.spread.testnet get_num '{}'```
-* near call contract.spread.testnet increment '{}' --accountId spread.testnet --amount 2```
-* near view contract.spread.testnet get_users '{}'```
+* near view contract.spread.testnet get_num '{}'
+* near call contract.spread.testnet increment '{}' --accountId spread.testnet --amount 2
+* near view contract.spread.testnet get_users '{}'
 
 
 
 near dev-deploy -f out/main.wasm  - деплой нового контракта чтоб не делать миграцию
 
-export CONTRACT_NAME=dev-1644433678195-58699302756227```
-near view dev-1644433678195-58699302756227 get_users '{}'```
-near call dev-1644433678195-58699302756227 new '{}' --accountId spread.testnet ```
+export CONTRACT_NAME=dev-1644433678195-58699302756227
+near view dev-1644433678195-58699302756227 get_users '{}'
+near call dev-1644433678195-58699302756227 new '{}' --accountId spread.testnet 
 
-near call dev-1644433678195-58699302756227 make_new_insurance '{"contract_address": "contract_addressABC", "nft_id": "nft_id123", "image_hash": "HGJGJFGHF"}' --accountId spread.testnet --amount 1.5```
+near call dev-1644433678195-58699302756227 make_new_insurance '{"contract_address": "contract_addressABC", "nft_id": "nft_id123", "image_hash": "HGJGJFGHF"}' --accountId spread.testnet --amount 1.5
 
-near call dev-1644433678195-58699302756227 new'{}' --accountId spread.testnet```
+near call dev-1644433678195-58699302756227 new'{}' --accountId spread.testnet
 
-near view dev-1644875835620-48624210077592 get_insurance_data '{"contract_address": "contract_addressABC", "nft_id": "nft_id123"}' --accountId spread.testnet  ```
+near view dev-1644875835620-48624210077592 get_insurance_data '{"contract_address": "contract_addressABC", "nft_id": "nft_id123"}' --accountId spread.testnet  
 
-near view dev-1644875835620-48624210077592 get_hash_image_nft '{"contract_address": "contract_addressABC", "nft_id": "nft_id123"}' --accountId spread.testnet  ```
+near view dev-1644875835620-48624210077592 get_hash_image_nft '{"contract_address": "contract_addressABC", "nft_id": "nft_id123"}' --accountId spread.testnet  
 
 
 # Description
@@ -47,15 +47,15 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 (Taken from official installation guide)
 
 Configure your current shell by running:
-source $HOME/.cargo/env```
+source $HOME/.cargo/env
 Add wasm target to your toolchain by running:
 rustup target add wasm32-unknown-unknown
 Next, make sure you have near-cli by running:
 
-near --version```
+near --version
 If you need to install near-cli:
 
-npm install near-cli -g```
+npm install near-cli -g
 
 # Login
 If you do not have a NEAR account, please create one with NEAR Wallet.
@@ -66,11 +66,11 @@ near login
 Modify the top of src/config.js, changing the CONTRACT_NAME to be the NEAR account that was just used to log in.
 
 …
-const CONTRACT_NAME = 'YOUR_ACCOUNT_NAME_HERE'; /* TODO: fill this in! */```
+const CONTRACT_NAME = 'YOUR_ACCOUNT_NAME_HERE'; /* TODO: fill this in! */
 …
 Start the example!
 
-yarn start```
+yarn start
 
 # To test
 cd contract```
