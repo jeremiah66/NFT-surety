@@ -2,8 +2,8 @@
 ## Counter example in Rust
 near keys contract.spread.testnet   - если удалить тут ключ то контракт будет залоченным и уже не изменяемым
 
-* export CONTRACT_NAME=contract.spread.testnet
-* echo $CONTRACT_NAME
+ export CONTRACT_NAME=contract.spread.testnet```
+ echo $CONTRACT_NAME```
 
 * near view contract.spread.testnet get_num '{}'
 * near call contract.spread.testnet increment '{}' --accountId spread.testnet --amount 2
