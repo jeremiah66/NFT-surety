@@ -131,3 +131,5 @@ cargo test -- --nocapture
 cd contract
 cargo doc --no-deps --open
 ```
+## sample
+https://1234-nearexample-rustcounter-dw48kfk1bl1.ws-eu47.gitpod.io/
